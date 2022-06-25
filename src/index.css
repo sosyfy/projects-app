@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mtp ::-webkit-scrollbar {
+        width: 1px;
+      }  
+.mtp ::-webkit-scrollbar-track {
+    background: #24df72;
+  }
+
+  .tooltip {
+    position: relative;
+    position: relative;
+    display: inline-block;
+    display: inline-block;
+    --tooltip-offset: calc(100% + 16px + var(--tooltip-tail, 0px));
+    text-align: center;
+    --tooltip-tail: 6px;
+    --tooltip-color: hsl(var(--n));
+    --tooltip-text-color: hsl(var(--nc));
+    --tooltip-tail-offset: calc(100% + 16px - var(--tooltip-tail));
+}
+
+@layer components {
+  .navlink {
+    @apply  rounded-md p-2 cursor-pointer hover:text-white-text text-black-light dark:text-white-text hover:dark:text-black-dark hover:bg-green-light bg-white dark:bg-black-light hover:dark:bg-green-light font-semibold text-lg transition-colors ease-in;
+  }
+  .navlink-active {
+    @apply flex items-center gap-x-4 bg-green-light dark:bg-gray-light text-black-dark dark:text-green-dark group-hover:text-white font-bold;
+  }
+}
