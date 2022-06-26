@@ -4,6 +4,8 @@ import useDarkmode from '../../hooks/useDarkmode'
 import useStore from '../../store/useStore'
 import {NavLink } from 'react-router-dom'
 import { GoHome } from "react-icons/go";
+import {CgMenuLeft} from 'react-icons/cg'
+import {GiCrossMark } from 'react-icons/gi'
 
 
 
@@ -13,28 +15,26 @@ function MobileSideBar() {
 
   const [isDarkMode , toggleDarkMode ] = useDarkmode()
 
-
-console.log(isOpen);
   return (
     <div className='sm:hidden z-30 sticky w-screen mtp'>
-        <div className="flex justify-between items-center px-4 py-2 bg-gray-light dark:bg-black-dark shadow-sm relative">
-            <div className='cursor-pointer dark:text-white-text' onClick={()=> toggleMobile()} >
-                <span>+++</span>
+        <div className="flex justify-between items-center px-4 py-2 bg-gray-light dark:bg-black shadow relative">
+            <div className='cursor-pointer dark:text-white-text text-black text-lg' onClick={()=> toggleMobile()} >
+             {isOpen ? <CgMenuLeft className='text-2xl'/> : <GiCrossMark /> }
             </div>
             <div >
-                <h2 className='uppercase font-bold dark:text-white-text'>sosyfyed</h2>
+                <h2 className='uppercase font-bold dark:text-white-text text-green-light select-none'>sosyfyed</h2>
             </div>
             <div className='' onClick={() => toggleDarkMode()} >
               <img src={logo} alt="" className='h-6 rounded-full' />
             </div>
         </div>
-            <ul className={` ${isOpen ? "-left-60" : "left-0"} fixed h-screen bg-gray-dark dark:bg-black-light w-60  top-0 bottom-0 overflow-auto px-4  pt-12 mtp  duration-500 transition-all -z-10`}>
+            <ul className={` ${isOpen ? "-left-60" : "left-0"} fixed h-screen bg-gray-dark dark:bg-dark-secondary w-60  top-0 bottom-0 overflow-auto px-4  pt-12 mtp  duration-500 transition-all -z-10`}>
             <li
             data-tip="Home"
             className={`group`}
           >
             <NavLink to='/'  className={({ isActive }) =>
-              !isActive ? "" : "flex gap-x-4 items-center  bg-white py-1 px-3 rounded-sm text-black-light font-semibold dark:bg-black-dark"
+              isActive ? "navmobile-active" : "navmobile"
             } >
             <GoHome className={` text-xl `} />
             <span className={` origin-left duration-200`}>

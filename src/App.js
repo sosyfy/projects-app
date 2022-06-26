@@ -14,7 +14,7 @@ function App() {
      {/* sidebar   */}
       <Navbar />
      {/* main  */}
-        <section className={`${open ? "sm:ml-60" : "sm:ml-20"} pt-9  sm:pt-0 w-full duration-300 scroll-smooth`}>
+        <section className={`${open ? "sm:ml-60" : "sm:ml-20"} pt-9 dark:bg-dark-secondary dark:text-white-text bg-white text-black  h-screen  sm:pt-0 w-full duration-300 scroll-smooth`}>
           <Routes>
             <Route path="/" element={<Dashboard />}/>
           </Routes>

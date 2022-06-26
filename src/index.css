@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;1,200&family=Mulish:ital,wght@0,300;1,300&family=Nunito:wght@300;400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,19 +16,27 @@
     position: relative;
     display: inline-block;
     display: inline-block;
+    font-weight: 600;
     --tooltip-offset: calc(100% + 16px + var(--tooltip-tail, 0px));
     text-align: center;
     --tooltip-tail: 6px;
-    --tooltip-color: hsl(var(--n));
-    --tooltip-text-color: hsl(var(--nc));
+    --tooltip-color: #05ce91;
+    --tooltip-text-color: white;
     --tooltip-tail-offset: calc(100% + 16px - var(--tooltip-tail));
 }
 
 @layer components {
   .navlink {
-    @apply  rounded-md p-2 cursor-pointer hover:text-white-text text-black-light dark:text-white-text hover:dark:text-black-dark hover:bg-green-light bg-white dark:bg-black-light hover:dark:bg-green-light font-semibold text-lg transition-colors ease-in;
+    @apply  rounded-md p-2 cursor-pointer hover:text-white-text text-black-light dark:text-white-text hover:dark:text-black-dark hover:bg-green-light bg-white/20 dark:bg-black-light/40 hover:dark:bg-green-light font-semibold text-lg;
   }
   .navlink-active {
     @apply flex items-center gap-x-4 bg-green-light dark:bg-gray-light text-black-dark dark:text-green-dark group-hover:text-white font-bold;
   }
+  .navmobile {
+    @apply flex gap-x-4 items-center  bg-white/10 py-1 px-3 rounded-sm text-black-dark text-lg font-semibold dark:text-white-text dark:bg-black-dark/10
+  }
+  .navmobile-active {
+    @apply flex gap-x-4 items-center  bg-green-light/90 py-1 px-3 rounded-sm text-white-text text-lg font-semibold dark:text-white-text dark:bg-green-light
+  }
 }
+/* // "#3bc76b" */

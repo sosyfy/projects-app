@@ -20,7 +20,7 @@ function SideBar() {
       {/* icon  */}
       <HiOutlineFastForward
         className={`absolute cursor-pointer rotate-180 -right-3 top-6 w-8 h-8 dark:bg-black-dark dark:border-white dark:text-white  text-white bg-green-light
-           text-text-white border-4 rounded-full  ${!open && "rotate-0"}`}
+           text-text-white border-4 dark:border-2 rounded-full  ${!open && "rotate-0"}`}
         onClick={toggleNav}
       />
       {/* top nav  */}
@@ -34,7 +34,7 @@ function SideBar() {
           }`}
         />
         <h1
-          className={`text-white origin-left font-bold text-xl duration-200 uppercase ${
+          className={`dark:text-white text-black-dark origin-left font-bold text-xl duration-200 uppercase ${
             !open && "scale-0"
           }`}
         >
@@ -52,7 +52,7 @@ function SideBar() {
             }  group`}
           >
             <NavLink to='/'  className={({ isActive }) =>
-              isActive ? "navlink-active navlink" : "flex items-center gap-4 navlink"
+              !isActive ? "navlink-active navlink" : "flex items-center gap-4 navlink"
             } >
             <GoHome className={`${!open && "text-3xl"} text-xl `} />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
