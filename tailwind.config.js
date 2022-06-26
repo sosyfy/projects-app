@@ -16,7 +16,9 @@ module.exports = {
       "gray-light": "#f2f2f2",
       "dark-primary": "#121212",
       "dark-secondary": "#000000e0",
-      "black" : "#000000"
+      "black" : "#000000",
+      "gray-primary" : "#f7f7f7",
+      "red": "#FF0000"
     },
     fontFamily: {
       'jsans': ['Josefin+Sans', 'sans-serif'],

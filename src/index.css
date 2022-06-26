@@ -27,7 +27,7 @@
 
 @layer components {
   .navlink {
-    @apply  rounded-md p-2 cursor-pointer hover:text-white-text text-black-light dark:text-white-text hover:dark:text-black-dark hover:bg-green-light bg-white/20 dark:bg-black-light/40 hover:dark:bg-green-light font-semibold text-lg;
+    @apply  rounded-md p-2 cursor-pointer hover:text-white-text text-black-light dark:text-white-text hover:dark:text-black-dark hover:bg-green-light bg-gray-primary dark:bg-black-light/40 hover:dark:bg-green-light font-semibold text-lg;
   }
   .navlink-active {
     @apply flex items-center gap-x-4 bg-green-light dark:bg-gray-light text-black-dark dark:text-green-dark group-hover:text-white font-bold;

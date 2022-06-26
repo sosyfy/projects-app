@@ -28,7 +28,7 @@ function MobileSideBar() {
               <img src={logo} alt="" className='h-6 rounded-full' />
             </div>
         </div>
-            <ul className={` ${isOpen ? "-left-60" : "left-0"} fixed h-screen bg-gray-dark dark:bg-dark-secondary w-60  top-0 bottom-0 overflow-auto px-4  pt-12 mtp  duration-500 transition-all -z-10`}>
+            <ul className={` ${isOpen ? "-left-60" : "left-0"} fixed h-screen bg-white dark:bg-dark-secondary w-60  top-0 bottom-0 overflow-auto px-4  pt-12 mtp  duration-500 transition-all -z-10`}>
             <li
             data-tip="Home"
             className={`group`}
