@@ -1,8 +1,15 @@
+import axios from 'axios'
 import React from 'react'
+import Clock from './Clock'
 
 function Dashboard() {
+  
+
+
   return (
-    <div className='text-center'>Dashboard</div>
+    <div className=''>
+      {/* <Clock />  */}
+    </div>
   )
 }
 

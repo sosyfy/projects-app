@@ -123,7 +123,7 @@ function SideBar() {
             }  group`}
           >
             <NavLink
-              to="/vdd"
+              to="/convertors"
               className={({ isActive }) =>
                 isActive
                   ? "navlink-active navlink py-1"
