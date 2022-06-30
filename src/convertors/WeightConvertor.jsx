@@ -18,10 +18,11 @@ function WeightConvertor() {
     setConvert(true)    
    }
   return (
-    <div className='p-4 ml-6  mt-4 rounded-md flex  flex-col items-start bg-white dark:bg-dark-primary'>
-        <h2 className="py-4 text-center text-black-dark dark:text-white-text font-extrabold">Weight Convertor </h2>
+    <div className='p-4 sm:ml-6 mx-4 mt-4 rounded-md flex  flex-col items-start bg-white dark:bg-dark-primary'>
+        <h2 className="py-2 text-xl text-center mx-auto sm:mx-0 text-black-dark dark:text-white-text font-extrabold">Weight Convertor </h2>
+        <p className='capitalize font-semibold'> weight in kgs</p>
         <form className=' flex w-full  mb-6 ' onSubmit={ submit}>
-            <input type="number" required value={weight} className="outline-none  border-r-0 p-3 px-5   rounded-l-md bg-gray-dark text-black  font-extrabold focus:border-green-light "   onChange={ (event)=> setWeight( parseInt(event.target.value) )}/>
+            <input type="number" placeholder='Enter kgs' required value={weight} className="outline-none  border-r-0 p-3 px-5   rounded-l-md bg-gray-dark text-black  font-extrabold focus:border-green-light "   onChange={ (event)=> setWeight( parseInt(event.target.value) )}/>
             <input type="submit" value="Convert" className='right-0 outline-none border-none bg-green-light dark:font-extrabold px-4 rounded-r-md text-black text font-bold' />
         </form>
 

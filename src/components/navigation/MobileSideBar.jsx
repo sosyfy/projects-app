@@ -6,6 +6,8 @@ import {NavLink } from 'react-router-dom'
 import { GoHome } from "react-icons/go";
 import {CgMenuLeft} from 'react-icons/cg'
 import {GiCrossMark } from 'react-icons/gi'
+import {FaBalanceScale} from 'react-icons/fa'
+
 
 
 
@@ -16,7 +18,7 @@ function MobileSideBar() {
   const [isDarkMode , toggleDarkMode ] = useDarkmode()
 
   return (
-    <div className='sm:hidden z-30 sticky w-screen mtp'>
+    <div className='sm:hidden z-100 sticky w-screen mtp'>
         <div className="flex justify-between items-center px-4 py-2 bg-gray-light dark:bg-black shadow relative">
             <div className='cursor-pointer dark:text-white-text text-black text-lg' onClick={()=> toggleMobile()} >
              {isOpen ? <CgMenuLeft className='text-2xl'/> : <GiCrossMark /> }
@@ -37,6 +39,19 @@ function MobileSideBar() {
               isActive ? "navmobile-active" : "navmobile"
             } >
             <GoHome className={` text-xl `} />
+            <span className={` origin-left duration-200`}>
+              Home
+            </span>
+            </NavLink>
+          </li>
+            <li
+            data-tip="Home"
+            className={`group`}
+          >
+            <NavLink to='/convertors'  className={({ isActive }) =>
+              isActive ? "navmobile-active" : "navmobile"
+            } >
+            <FaBalanceScale className={` text-xl `} />
             <span className={` origin-left duration-200`}>
               Home
             </span>

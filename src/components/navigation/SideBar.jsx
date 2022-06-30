@@ -5,6 +5,7 @@ import logo from "../../assets/images/logo.png";
 import { GoHome } from "react-icons/go";
 import useDarkmode from "../../hooks/useDarkmode";
 import { NavLink } from "react-router-dom";
+import {FaBalanceScale} from 'react-icons/fa'
 
 function SideBar() {
   const open = useStore((state) => state.open);
@@ -130,7 +131,7 @@ function SideBar() {
                   : "flex items-center gap-4 navlink py-1"
               }
             >
-              <GoHome className={`${!open && "text-3xl"} text-xl `} />
+              <FaBalanceScale className={`${!open && "text-3xl"} text-xl `} />
               <span className={`${!open && "hidden"} origin-left duration-200`}>
                 convertors
               </span>
