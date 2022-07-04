@@ -46,9 +46,9 @@ function SideBar() {
     >
       {/* icon  */}
       <HiOutlineFastForward
-        className={`absolute cursor-pointer rotate-180 -right-3 top-6 w-8 h-8 dark:bg-black-dark dark:border-white dark:text-white  text-white bg-green-light
+        className={`absolute cursor-pointer rotate-0 -right-3 top-6 w-8 h-8 dark:bg-black-dark dark:border-white dark:text-white  text-white bg-green-light
            text-text-white border-4 dark:border-2 rounded-full  ${
-             !open && "rotate-0"
+             open && "rotate-180"
            }`}
         onClick={toggleNav}
       />
@@ -137,8 +137,30 @@ function SideBar() {
               </span>
             </NavLink>
           </li>
+          <li
+            data-tip="codepen"
+            className={`${
+              !open &&
+              "justify-center tooltip hover:tooltip-open tooltip-right "
+            }  group`}
+          >
+            <NavLink
+              to="/codepen"
+              className={({ isActive }) =>
+                isActive
+                  ? "navlink-active navlink py-1"
+                  : "flex items-center gap-4 navlink py-1"
+              }
+            >
+              <FaBalanceScale className={`${!open && "text-3xl"} text-xl `} />
+              <span className={`${!open && "hidden"} origin-left duration-200`}>
+                codepen
+              </span>
+            </NavLink>
+          </li>
           </div>
         </ul>
+
       </div>
     </div>
   );

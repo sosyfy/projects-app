@@ -9,6 +9,7 @@ function Dashboard() {
   return (
     <div className=''>
       {/* <Clock />  */}
+      <h2>scv</h2>
     </div>
   )
 }

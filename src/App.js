@@ -4,7 +4,12 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import Dashboard from "./dashboard/Dashboard";
 import { Component } from "react";
 import Convertors from "./convertors/Convertors";
+import CodePen from "./codepen/CodePen";
+import React , { Suspense , lazy } from 'react'
 
+// const CodePen = lazy(()=> import("./codepen/CodePen"))
+// const Dashboard = lazy(()=> import("./dashboard/Dashboard"))
+// const Convertors = lazy(()=> import("./convertors/Convertors"))
 
 function App() {
  const  open = useStore((state)=> state.open)
@@ -12,7 +17,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <main className="flex flex-col sm:flex-row  w-full">
+      <main className="flex flex-col  sm:flex-row  w-full">
      {/* sidebar   */}
       <Navbar />
      {/* main  */}
@@ -20,7 +25,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Dashboard />}/>
             <Route path="/convertors" element={<Convertors />}/>
-
+            <Route path="/codepen" element={<CodePen />}/>
           </Routes>
         </section>
       </main>

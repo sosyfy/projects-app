@@ -53,10 +53,23 @@ function MobileSideBar() {
             } >
             <FaBalanceScale className={` text-xl `} />
             <span className={` origin-left duration-200`}>
-              Home
+              Convertors
             </span>
             </NavLink>
-          </li>
+           </li>
+            {/* <li
+            data-tip="Home"
+            className={`group`}
+          >
+            <NavLink to='/codepen'  className={({ isActive }) =>
+              isActive ? "navmobile-active" : "navmobile"
+            } >
+            <FaBalanceScale className={` text-xl `} />
+            <span className={` origin-left duration-200`}>
+              Codepen
+            </span>
+            </NavLink>
+           </li> */}
             </ul>
             <div className={` ${isOpen ? "hidden opacity-0" : ""}  fixed h-screen w-screen -z-20 bg-black-light opacity-5 duration-500 transition-all`} onClick={()=> toggleMobile()}></div>
      </div>

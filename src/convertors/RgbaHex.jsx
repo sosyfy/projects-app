@@ -68,18 +68,18 @@ function RgbaHex() {
             
             <input type="submit" className='w-full -py-2  rounded px-2 focus:outline-green-dark bg-green-light ' value="Calculate"  onClick={convert} />
         </div>
-        <div className='bg-slate-dark w-full pt-4 my-4 py-8 mx-2 px-3 rounded flex flex-col dark:bg-[#e2e1]'>
+        <div className='bg-slate-dark w-full pt-4 my-10 py-8 px-2 rounded flex flex-col dark:bg-[#e2e1]'>
            
             <div className='w-full flex gap-2 items-center pb-2 '>
             <label htmlFor="" className='mb-2 dark:text-white-text'> RGB </label>
             <input type="text" className="result w-full px-3 py-2 rounded  focus:outline-green-light  bg-slate-light"  value={rgbCol} disabled />
-            <button className={`absolute right-7 hover:text-green-light `} onClick={rgbCopy(rgbCol)}>copy</button>
+            <button className={` right-7 hover:text-green-light `} onClick={rgbCopy(rgbCol)}>copy</button>
             </div>
 
             <div className='w-full flex gap-2 items-center '>
             <label htmlFor="" className='mt-2 dark:text-white-text'> HEX </label>
             <input type="text" className='py-2  px-3 w-full rounded mt-2 focus:outline-green-dark bg-slate-light' value={hexCol}  disabled/>
-            <button className={`absolute right-7 hover:text-green-light `} onClick={hexCopy(hexCol)}>copy</button>
+            <button className={` right-7 hover:text-green-light `} onClick={hexCopy(hexCol)}>copy</button>
             </div>
         </div>
     </div>

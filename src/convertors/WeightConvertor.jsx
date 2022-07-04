@@ -32,7 +32,7 @@ function WeightConvertor() {
                     Pounds 
                 </p>
                 <p className="text-black-light font-nunito dark:text-white-text">
-                {pounds}
+                {parseInt(pounds).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")}
                 </p>
                 
                 </div>
@@ -41,7 +41,7 @@ function WeightConvertor() {
                     Ounces 
                 </p>
                 <p className="text-black-light font-nunito dark:text-white-text ">
-                {Ounces}
+                {parseInt(Ounces).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")}
                 </p>
             </div>
             <div className="grams bg-gray-light  dark:bg-black-dark shadow shadow-base-300 px-3 rounded py-1 ">
@@ -49,7 +49,7 @@ function WeightConvertor() {
                     Grams
                 </p>
                 <p className="text-black dark:text-white-text font-nunito">
-                {grams}
+                {parseInt(grams).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,")}
                 </p>
             </div>
         </div> }

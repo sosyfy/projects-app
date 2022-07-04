@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 .mtp ::-webkit-scrollbar {
-        width: 1px;
+        width: 10px;
       }  
-.mtp ::-webkit-scrollbar-track {
-    background: #24df72;
-  }
+/* .mtp ::-webkit-scrollbar-track {
+    background: whitesmoke;
+  } */
 
   .tooltip {
     position: relative;
